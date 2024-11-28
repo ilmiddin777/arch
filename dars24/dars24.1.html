@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Example</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            width: 100%;
+            height: 1700px;
+            background-color: #283F44;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .boshi {
+            width: 1360px;
+            height: 50px;
+            display: flex;
+            margin-top: 50px;
+            align-items: center;
+        }
+        .arch {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 0;
+            color: #fff;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            margin-top: 12px;
+        }
+        .nav-links li {
+            margin: 0 60px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .cont {
+            width: 130px;
+            height: 40px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: white;
+            color: #283F44;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -5px;
+        }
+        .ppp {
+            margin: 0;
+            color: #283F44;
+        }
+        .box1 {
+            width: 600px;
+            height: 150px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 400px;
+            line-height: 1.4;
+            word-spacing: 1px;
+        }
+        .jpg {
+            width: 900px;
+            height: 650px;
+        }
+        .jpg img {
+            max-width: 1200px;
+            height: 550px;
+            border-radius: 10px;
+            margin-left: 80px;
+            margin-top: 80px;
+        }
+        .line1 {
+            width: 1200px;
+            height: 5px;
+            margin-left: 80px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: #A4A4A4;
+            border: 1px solid #A4A4A4;
+        }
+        .line2 {
+            width: 400px;
+            height: 5px;
+            margin-left: 0px;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #fff;
+        }
+        .line3 {
+            width: 400px;
+            height: 1px;
+            border-top: 1px;
+            margin-left: 400px;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #fff;
+        }
+        .line4 {
+            width: 400px;
+            height: 1px;
+            border-top: 1px;
+            margin-left: 800px;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #fff;
+        }
+        .malum {
+            display: flex;
+            justify-content: center;
+            gap: 250px;
+            font-size: 25px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 20px;
+        }
+        .malum li {
+            list-style: none;
+        }
+        .malumot {
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
+            margin-top: 50px;
+            gap: 220px;
+            color: white;
+            margin-left: 30px;
+            align-items: flex-start;
+            margin-top: 5px;
+        }
+        .malumot li {
+            list-style: none;
+        }
+        .kattatex {
+            margin-top: 100px;
+            margin-left: 80px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            color: #fff;
+        }
+        .kichtext {
+            margin-top: 60px;
+            margin-left: 80px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            color: #fff;
+        }
+        .kichtext1 {
+            margin-top: -106px;
+            margin-left: 300px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            color: #fff;
+        }
+        .kichtext2 {
+            margin-top: -120px;
+            margin-left: 100px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 65px;
+            color: #fff;
+        }
+        .kichtext3 {
+            margin-top: -170px;
+            margin-left: 330px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 65px;
+            color: #fff;
+        }
+        .kichtext4 {
+            margin-top: 56px;
+            margin-left: 80px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            color: #fff;
+        }
+        .kichtext5 {
+            margin-top: -88px;
+            margin-left: 300px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            color: #fff;
+        }
+        .kichtext6 {
+            margin-top: -120px;
+            margin-left: 100px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 65px;
+            color: #fff;
+        }
+        .kichtext7 {
+            margin-top: -180px;
+            margin-left: 330px;
+            width: 500px;
+            height: 90px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 65px;
+            color: #fff;
+        }
+        .asos {
+            width: 550px;
+            height: 500px;
+            margin-top: -460px;
+            color: #fff;
+            margin-left: 700px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 30px;
+        }
+        .gray {
+            color: gray;
+        }
+        .bir {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="boshi">
+                <div class="arch">Arch.</div>
+                <div class="nav-links">
+                    <ul>
+                        <li>How it work</li>
+                        <li>Portfolio</li>
+                        <li>FAQ</li>
+                        <li>Blog</li>
+                        <li class="cont"><p class="ppp">Contact US</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box1">Highly passion creative agency focusing in modern style architectural design</div>
+            <div class="jpg"><img src="Снимок экрана (25) 1.png" width="1200px" id="img"></div>
+            <div class="line1">
+                <div class="line2" id="tegg1" onclick="surish1('Снимок экрана (25) 1.png', 1)">
+                </div>
+            </div>
+            <div class="malum">
+                <li class="ming1" id="bir gray" onclick="bajarish1('Снимок экрана (25) 1.png',0)">Scandinavian design</li>
+                <li class="ming2" id="bir gray" onclick="bajarish2('manzara 2.webp',1)">Brutalism design</li>
+                <li class="ming3" id="bir gray" onclick="bajarish3('vazifa4.webp',2)">Industrial design</li>
+            </div>
+            <div class="malumot">
+                <li class="ming3" id="bir gray">Premium modem conternporogy home funnlphing <br>dentanation - sterling quality craftumanahing</li>
+                <li>Premium modem conternporogy home funnlphing <br>dentanation - sterling quality craftumanahing</li>
+                <li>Premium modem conternporogy home funnlphing <br>dentanation - sterling quality craftumanahing</li>
+            </div>
+            <div class="kattatex"><p>We always do work in <br> structure and plane </p></div>
+            <div class="kichtext"><p>your experiense</p></div>
+            <div class="kichtext1"><p>finished projects </p></div>
+            <div class="kichtext2" data-offset="200" onclick="bajar1()">15</div>
+            <div class="kichtext3" onclick="bajar2()">55+</div>
+            <div class="kichtext4">awards wimimg </div>            
+            <div class="kichtext5">awards wimimg </div>
+            <div class="kichtext6" onclick="bajar3()">5</div>
+            <div class="kichtext7" onclick="bajar4()">50+</div>
+            <div class="asos">Contrary to popular belief, Lorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature </div>
+        </div>
+    </div>
+    <script>
+        let son = 0;
+        let kopay = 50; 
+        function bajar1() {
+            let f = setTimeout(() => {
+                let a = document.querySelector('.kichtext3'); 
+                son++;
+                a.innerHTML = `<h2>${son}</h2>`;
+                bajar1();
+            }, 50);
+            if (son === kopay) {
+                clearTimeout(f); 
+            }
+        }
+        bajar1();
+
+        let son1 = 0;
+        let kopay1 = 15; 
+        function bajar2() {
+            let f = setTimeout(() => {
+                let a = document.querySelector('.kichtext2'); 
+                son1++;
+                a.innerHTML = `<h2>${son1}</h2>`;
+                bajar2();
+            }, 100);
+            if (son1 === kopay1) {
+                clearTimeout(f); 
+            }
+        }
+        bajar2();
+
+        let son2 = 0;
+        let kopay2 = 5; 
+        function bajar3() {
+            let f = setTimeout(() => {
+                let a = document.querySelector('.kichtext6'); 
+                son2++;
+                a.innerHTML = `<h2>${son2}</h2>`;
+                bajar3();
+            }, 260);
+            if (son2 === kopay2) {
+                clearTimeout(f); 
+            }
+        }
+        bajar3();
+
+        let son3 = 0;
+        let kopay3 = 55; 
+        function bajar4() {
+            let f = setTimeout(() => {
+                let a = document.querySelector('.kichtext7'); 
+                son3++;
+                a.innerHTML = `<h2>${son3}</h2>`;
+                bajar4();
+            }, 50);
+            if (son3 === kopay3) {
+                clearTimeout(f); 
+            }
+        }
+        bajar4();
+
+        let a = document.querySelector("img")
+        function bajarish1() {  
+            a.src = "Снимок экрана (25) 1.png";        
+            for (let i = 1; i <= 3; i++) {
+                document.querySelector(".ming" + i).classList.remove('bir');
+                document.querySelector(".ming" + i).classList.add('gray');
+            }
+            document.querySelector(".ming1").classList.remove('gray');
+            document.querySelector(".ming1").classList.add('bir');
+        }
+        function bajarish2() {
+            a.src = 'manzara 2.webp';
+            for (let i = 1; i <= 3; i++) {
+                document.querySelector(".ming" + i).classList.remove('bir');
+                document.querySelector(".ming" + i).classList.add('gray');
+            }
+            document.querySelector(".ming2").classList.remove('gray');
+            document.querySelector(".ming2").classList.add('bir');
+        }
+
+        function bajarish3() {
+            a.src = 'vazifa4.webp';
+            for (let i = 1; i <= 3; i++) {
+                document.querySelector(".ming" + i).classList.remove('bir');
+                document.querySelector(".ming" + i).classList.add('gray');
+            }
+            document.querySelector(".ming3").classList.remove('gray');
+            document.querySelector(".ming3").classList.add('bir');
+        }
+    </script>
+</body>
+</html>
